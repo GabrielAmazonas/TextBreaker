@@ -1,11 +1,13 @@
+from Block import Block
 class Line:
-    self.raw_string = ""
-    self.blocks = []
+     
+    def __init__(self, raw_string):
+        self.blocks = []
+        self.raw_string = raw_string
+        self.build_line_blocks()
+        
 
-    self.contains_letters = False
-    self.contains_digits = False
-    self.is_only_digits = False
-    self.is_only_letters = False
+
 
     def build_line_blocks(self):
         """This method is called on the Text constructor. Passing the needed parameters to break down the"""
